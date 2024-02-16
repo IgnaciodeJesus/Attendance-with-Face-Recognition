@@ -19,15 +19,15 @@ def get_data_from_mysql():
         host="localhost",
         user="root",
         password="root",
-        database="asistencia_del_cia"
+        database="attendance_db"
     )
     cursor = connection.cursor()
 
     # Get the current date in "YYYY-MM-DD" format
     current_date = get_current_date()
 
-    # Get the data from the "registro" table for the current date
-    query = f"SELECT id, fecha, nombre, hora FROM registro WHERE fecha = '{current_date}'"
+    # Get the data from the "registration" table for the current date
+    query = f"SELECT id, date, name, time FROM registration WHERE date = '{current_date}'"
     cursor.execute(query)
     data = cursor.fetchall()
 
@@ -39,7 +39,7 @@ def get_data_from_mysql():
 
 def create_pdf(data):
     # Create the PDF file named "lista_asistencia_fecha.pdf"
-    filename = f"lista_asistencia_{get_current_date()}.pdf"
+    filename = f"Assistance_List_{get_current_date()}.pdf"
     doc = SimpleDocTemplate(filename, pagesize=letter)
     elements = []
 
@@ -57,7 +57,13 @@ def create_pdf(data):
 
     # Table style
     style = TableStyle([
-        # ... (your style code here, just like before)
+        ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
+        ('TEXTCOLOR',(0,0),(-1,0),colors.whitesmoke),
+        ('ALIGN',(0,0),(-1,-1),'CENTER'),
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+        ('BACKGROUND',(0,1),(-1,-1),colors.beige),
+        ('GRID', (0,0), (-1,-1), 1, colors.black),
     ])
     table.setStyle(style)
 

@@ -15,12 +15,12 @@ def get_data_from_mysql():
         host="localhost",
         user="root",
         password="root",
-        database="asistencia_del_cia"
+        database="attendance_db"
     )
     cursor = connection.cursor()
 
-    # Get all the data from the "registro" table sorted by date
-    query = "SELECT id, fecha, nombre, hora FROM registro ORDER BY fecha"
+    # Get all the data from the "registration" table sorted by date
+    query = "SELECT id, date, name, time FROM registration ORDER BY date"
     cursor.execute(query)
     data = cursor.fetchall()
 
@@ -40,8 +40,8 @@ def get_data_from_mysql():
 
 
 def create_pdf(organized_data):
-    # Create the PDF file named "lista_asistencia_historial.pdf"
-    filename = "lista_asistencia_historial.pdf"
+    # Create the PDF file named "Assistance_list.pdf"
+    filename = "Assistance_list.pdf"
     doc = SimpleDocTemplate(filename, pagesize=letter)
     elements = []
 
