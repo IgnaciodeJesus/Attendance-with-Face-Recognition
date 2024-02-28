@@ -38,12 +38,8 @@ Follow these steps to set up the project on your local machine:
 
 For your convenience, here are some visual aids to help you with the expected outcomes:
 
-- [Setup and Execution Flow](https://ibb.co/m4fK0k0)
+- Example of Attendance Taking & Records (https://ibb.co/n0brt46)
   
-  ![Setup and Execution Flow](https://i.ibb.co/m4fK0k0/foto-para-mostrar-en-el-repo.png)
-
-- [Example of Attendance Records](https://ibb.co/RzVTD2T)
-  
-  ![Example of Attendance Records](https://i.ibb.co/RzVTD2T/registros-output-ejemplo.png)
+  ![Example of Attendance Taking & Records](https://i.ibb.co/PYNx0JF/att.png)
 
 This project was developed for the Artificial Intelligence circle at the University of Lima and aims to provide a straightforward, efficient method for attendance tracking through the innovative use of facial recognition technology.
