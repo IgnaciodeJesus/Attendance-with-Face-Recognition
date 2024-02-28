@@ -38,7 +38,7 @@ Follow these steps to set up the project on your local machine:
 
 For your convenience, here are some visual aids to help you with the expected outcomes:
 
-- Example of Attendance Taking & Records (https://ibb.co/n0brt46)
+- Example of Attendance Taking & Records
   
   ![Example of Attendance Taking & Records](https://i.ibb.co/PYNx0JF/att.png)
 
